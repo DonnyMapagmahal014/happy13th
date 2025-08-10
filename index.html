@@ -37,6 +37,15 @@
         border: 4px solid #cdd7f1;
         border-radius: 12px;
         box-shadow: 0 0 25px rgba(255,255,255,0.2);
+        margin-bottom: 20px;
+    }
+    iframe.spotify {
+        border-radius: 12px;
+        width: 90%;
+        max-width: 600px;
+        height: 80px;
+        margin-top: 10px;
+        box-shadow: 0 0 15px rgba(0,0,0,0.4);
     }
     #content {
         background: rgba(0,0,0,0.5);
@@ -54,11 +63,15 @@
         <source src="YOUR_VIDEO_LINK_HERE.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
+    <!-- Spotify embed: Replace the src with your chosen song link from Spotify's embed code -->
+    <iframe class="spotify" src="<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/5btJjUxmhPK1cwdw0mnhRD?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>" 
+        frameborder="0" allowtransparency="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+    </iframe>
 </div>
 
 <script>
 // Password protection
-const password = "happy13th"; // change your password here
+const password = "happy13th"; // updated password
 let entered = prompt("Enter the special password:");
 if (entered === password) {
     document.getElementById("content").style.display = "block";
@@ -91,4 +104,3 @@ function startConfettiOnce(){
 
 </body>
 </html>
-
